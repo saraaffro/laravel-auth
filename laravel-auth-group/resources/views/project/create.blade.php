@@ -37,6 +37,13 @@
         <br>
         <br>
 
+        <label for="image_url">Image</label>
+        <br>
+        <div class="input-group mb-3">
+            <input name="image_url" type="file" class="form-control" id="inputGroupFile02">
+            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+        </div>
+
         <input type="submit" value="CREATE">
     </form>
 </div>

@@ -47,6 +47,7 @@ class ProjectController extends Controller
         $project -> title = $data['title'];
         $project -> description = $data['description'];
         $project -> date = $data['date'];
+        $project -> image_url = $data['image_url'];
 
         $project -> save();
 
@@ -96,6 +97,7 @@ class ProjectController extends Controller
         $project -> title = $data['title'];
         $project -> description = $data['description'];
         $project -> date = $data['date'];
+        $project -> image_url = $data['image_url'];
 
         $project -> save();
 

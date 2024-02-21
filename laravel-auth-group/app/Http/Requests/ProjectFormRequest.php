@@ -26,7 +26,8 @@ class ProjectFormRequest extends FormRequest
         return [
             'title' => 'required|string|max:50',
             'description' => 'required|min:100',
-            'date' => 'nullable|date|date_format:Y-m-d',
+            'date' => 'required|date|date_format:Y-m-d',
+            'image_url' => 'required',
         ];
     }
 
@@ -38,8 +39,10 @@ class ProjectFormRequest extends FormRequest
             'title.max' => 'Il titolo non deve superare i 50 caratteri',
             'description.required' => 'La descrizione è obbligatoria',
             'description.min' => 'La descrizione deve avere almeno 100 caratteri',
+            'date.required' => 'La data è obbligatoria',
             'date.date' => 'La data deve essere una data',
-            'date.date_format' => 'La data deve essere formattata come anno-mese-giorno'
+            'date.date_format' => 'La data deve essere formattata come anno-mese-giorno',
+            'image_url.required' => "L'immagine è obbligatoria"
         ];
     }
 }
