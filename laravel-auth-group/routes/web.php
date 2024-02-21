@@ -40,9 +40,18 @@ Route::middleware('auth')->group(function () {
     // DELETE
     Route::delete('/project/{id}', [ProjectController :: class, 'destroy'])
         -> name('project.destroy');
+
+    // CREATE
+    Route::get('/project/create', [ProjectController :: class, 'create'])
+    -> name('project.create');
+
+    // STORE
+    Route :: post('/project', [ProjectController :: class, 'store'])
+        -> name('project.store');
 });
 
 Route::get('/project/{id}', [ProjectController :: class, 'show'])
     -> name('project.show');
+
 
 require __DIR__.'/auth.php';

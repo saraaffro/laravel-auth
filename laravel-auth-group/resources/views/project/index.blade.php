@@ -4,10 +4,11 @@
 <div class="container">
     <h1 class="text-center py-5">Projects: {{count($projects)}}</h1>
 
-    <div class="text-end me-4" >
-        <a href="#" class="btn btn-primary my-3">New Project</a>
-    </div>
-   
+    @auth
+        <div class="text-end me-4" >
+            <a href="{{ route('project.create') }}" class="btn btn-primary my-3">New Project</a>
+        </div>
+   @endauth
 
     <div class="row gy-5 justify-content-center">
         @foreach ($projects as $project)
