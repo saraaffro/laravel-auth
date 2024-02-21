@@ -3,6 +3,16 @@
 
 <div class="container">
     <h1 class="text-center py-5">New Project</h1>
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
    
     <form action="{{ route('project.store')}}" method="POST">
 
