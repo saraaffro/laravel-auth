@@ -17,7 +17,9 @@ class ProjectFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => fake() -> words(4, true),
+            'description' => fake() -> text(350),
+            'date' => fake() -> dateTime(),
         ];
     }
 }

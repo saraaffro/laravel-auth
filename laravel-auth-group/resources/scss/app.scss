@@ -1,1 +1,13 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+.card{
+    height: 350px;
+
+    .card-title{
+        height: 50px;
+    }
+
+    .btn{
+        font-size: 12px;
+    }
+}
