@@ -15,9 +15,18 @@
                 <div class="card" style="width: 18rem;">
                     <img src="https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg" class="card-img-top" alt="project img">
                     <div class="card-body">
-                      <h5 class="card-title">{{$project -> title}}</h5>
-                      <p class="card-text">{{$project -> date}}</p>
-                      <a href="{{ route('project.show', $project -> id) }}" class="btn btn-primary">Show Details</a>
+                        <h5 class="card-title">{{$project -> title}}</h5>
+                        <p class="card-text">{{$project -> date}}</p>
+                        <a href="{{ route('project.show', $project -> id) }}" class="btn btn-primary">Show Details</a>
+
+                        @auth
+                            <form class="d-inline-block" action="{{ route('project.destroy', $project -> id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+
+                                <input class="btn btn-primary" type="submit" value="Delete" onclick="return confirm('Confirm delete?')" >
+                            </form>
+                        @endauth
                     </div>
                 </div>
             </div>
