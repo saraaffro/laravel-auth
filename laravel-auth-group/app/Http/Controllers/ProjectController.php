@@ -64,7 +64,9 @@ class ProjectController extends Controller
      */
     public function edit($id)
     {
-        //
+        $project = Project :: find($id);
+
+        return view('project.edit', compact('project'));
     }
 
     /**
@@ -76,7 +78,17 @@ class ProjectController extends Controller
      */
     public function update(ProjectFormRequest $request, $id)
     {
-        //
+        $project = Project :: find($id);
+
+        $data = $request -> all();
+
+        $project -> title = $data['title'];
+        $project -> description = $data['description'];
+        $project -> date = $data['date'];
+
+        $project -> save();
+
+        return redirect() -> route('project.index', $project -> id);
     }
 
     /**

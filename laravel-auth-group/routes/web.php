@@ -26,6 +26,16 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // ROUTE PROJECT
+    
+    // EDIT
+    Route::get('/project/{id}/edit', [ProjectController :: class, 'edit'])
+        -> name('project.edit');
+
+    // UPDATE
+    Route::put('/project/{id}', [ProjectController :: class, 'update'])
+        -> name('project.update');
 });
 
 Route::get('/project/{id}', [ProjectController :: class, 'show'])
