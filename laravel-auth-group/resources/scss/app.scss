@@ -1,7 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
 
 .card{
-    height: 350px;
+    height: 380px;
 
     .card-title{
         height: 50px;
@@ -10,4 +10,13 @@
     .btn{
         font-size: 12px;
     }
+}
+
+li{
+    list-style-type: none;
+}
+
+.btn{
+    background-color: #ef3b2d;
+    border-color: #ef3b2d;
 }

@@ -12,7 +12,7 @@
 
     <div class="row gy-5 justify-content-center align-items-center">
         <div class="col-5">
-            <img src="https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg" class="card-img-top" alt="project img">
+            <img src="{{ $project -> image_url}}" class="card-img-top" alt="project img">
         </div>    
         <div class="col-5">
             <p>{{$project -> description}}</p>
